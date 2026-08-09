@@ -4,18 +4,24 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
 from django.urls import re_path
-from app import views
 
 urlpatterns = [
     path('raw-admin/', admin.site.urls),
 
-    path('', views.Landing, name='landing'),
-    path('home/', views.Index, name='home'),
+    path('', include('app.urls')),
 
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 urlpatterns += [
-    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-    re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+    re_path(
+        r'^media/(?P<path>.*)$',
+        serve,
+        {'document_root': settings.MEDIA_ROOT}
+    ),
+    re_path(
+        r'^static/(?P<path>.*)$',
+        serve,
+        {'document_root': settings.STATIC_ROOT}
+    ),
 ]
