@@ -4,10 +4,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
 from django.urls import re_path
+from app import views
 
 urlpatterns = [
     path('raw-admin/', admin.site.urls),
-    path('', include('app.urls')),
+
+    path('', views.Landing, name='landing'),
+    path('home/', views.Index, name='home'),
+
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 

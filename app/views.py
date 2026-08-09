@@ -78,6 +78,10 @@ def active_legacy_portfolio(request):
     return JsonResponse(data, safe=False)
 
 # Create your views here.
+
+def Landing(request):
+    return render(request, 'app/landing.html')
+
 def Index(request):
     return render(request, 'app/homes.html')
 

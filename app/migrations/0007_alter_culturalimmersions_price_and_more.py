@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='culturalimmersions',
             name='price',
-            field=models.CharField(help_text='Price per person'),
+            field=models.CharField(max_length=100, help_text='Price per person'),
         ),
         migrations.AlterField(
             model_name='legacyportfolio',
             name='price',
-            field=models.CharField(help_text='Price per person'),
+            field=models.CharField(max_length=100, help_text='Price per person'),
         ),
     ]
