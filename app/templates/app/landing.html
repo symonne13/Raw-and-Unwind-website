@@ -786,55 +786,492 @@
             color: white;
         }
 
-        /* =========================================
-           MOBILE
-        ========================================= */
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
 
-        @media (max-width: 600px) {
+/* Tablets and smaller laptops */
+@media (max-width: 900px) {
 
-            .logo {
-                width: 200px;
-            }
+    .intro-content {
+        width: 92%;
+        padding: 25px;
+    }
 
-            .cinematic-line {
-                font-size: 15px;
-                letter-spacing: 2px;
-            }
+    .logo {
+        width: 230px;
+    }
 
-            .tagline {
-                font-size: 9px;
-                letter-spacing: 3px;
-            }
+    .cinematic-text {
+        margin-top: 25px;
+    }
 
-            .offer-popup {
-                min-height: 470px;
-                padding: 25px;
-            }
+    .cinematic-line {
+        font-size: clamp(17px, 3vw, 24px);
+        letter-spacing: 2.5px;
+    }
 
-            .popup-buttons {
-                flex-direction: column;
-            }
+    .offers-header {
+        padding: 55px 6% 35px;
+    }
 
-            .popup-btn {
-                width: 100%;
-            }
+    .offers-grid {
+        width: 92%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
 
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
+    .offer-image {
+        height: 190px;
+    }
 
-            .form-group.full {
-                grid-column: auto;
-            }
+    .offer-info {
+        padding: 20px;
+    }
+}
 
-            .booking-box {
-                padding: 25px;
-            }
 
-            .booking-actions {
-                flex-direction: column;
-            }
-        }
+/* =========================================
+   MOBILE PHONES
+========================================= */
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    /* -----------------------------------------
+       LANDING SCREEN
+    ----------------------------------------- */
+
+    .landing {
+        min-height: 100svh;
+        padding: 20px;
+        background-position: center center;
+    }
+
+    .intro-content {
+        width: 100%;
+        max-width: 430px;
+        padding: 20px 15px;
+    }
+
+    .logo {
+        width: min(210px, 60vw);
+    }
+
+    .cinematic-text {
+        margin-top: 22px;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .cinematic-line {
+        font-size: clamp(14px, 4vw, 18px);
+        letter-spacing: 1.8px;
+        line-height: 1.4;
+    }
+
+    .tagline {
+        margin-top: 20px;
+        font-size: 8px;
+        letter-spacing: 2.5px;
+        line-height: 1.6;
+    }
+
+    .enter-btn {
+        margin-top: 28px;
+        padding: 13px 25px;
+        width: auto;
+        max-width: 90%;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .skip-intro {
+        right: 15px;
+        bottom: 15px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* -----------------------------------------
+       OFFERS POPUP
+    ----------------------------------------- */
+
+    .offer-overlay {
+        padding: 15px;
+        align-items: center;
+    }
+
+    .offer-popup {
+        width: 100%;
+        max-width: 430px;
+        min-height: auto;
+        height: auto;
+        max-height: 90svh;
+
+        padding: 30px 22px;
+
+        justify-content: flex-end;
+
+        overflow-y: auto;
+    }
+
+    .popup-label {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
+
+    .offer-popup h2 {
+        font-size: clamp(28px, 8vw, 38px);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .offer-popup p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .popup-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .popup-btn {
+        width: 100%;
+        padding: 13px 18px;
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------
+       OFFERS PAGE
+    ----------------------------------------- */
+
+    .offers-page {
+        min-height: 100svh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .offers-header {
+        padding: 45px 20px 30px;
+    }
+
+    .offers-header span {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .offers-header h1 {
+        margin-top: 12px;
+        font-size: clamp(32px, 10vw, 45px);
+        line-height: 1.1;
+    }
+
+    .offers-header p {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------
+       OFFER CARDS
+    ----------------------------------------- */
+
+    .offers-grid {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding-bottom: 30px;
+    }
+
+    .offer-card {
+        width: 100%;
+    }
+
+    .offer-image {
+        height: 210px;
+    }
+
+    .offer-info {
+        padding: 22px 20px 20px;
+    }
+
+    .offer-category {
+        font-size: 9px;
+        letter-spacing: 1.8px;
+    }
+
+    .offer-info h3 {
+        font-size: 24px;
+        line-height: 1.2;
+        margin: 9px 0;
+    }
+
+    .offer-description {
+        min-height: auto;
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .price {
+        margin: 16px 0;
+        font-size: 21px;
+    }
+
+    .book-btn {
+        padding: 14px;
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------
+       CONTINUE BUTTON
+    ----------------------------------------- */
+
+    .continue-container {
+        padding: 5px 15px 45px;
+    }
+
+    .continue-btn {
+        width: 100%;
+        max-width: 400px;
+        padding: 14px 20px;
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------
+       BOOKING MODAL
+    ----------------------------------------- */
+
+    .booking-overlay {
+        padding: 12px;
+        align-items: flex-start;
+
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .booking-box {
+        width: 100%;
+        max-width: 430px;
+
+        margin: 20px auto;
+
+        padding: 28px 20px 22px;
+    }
+
+    .close-booking {
+        top: 10px;
+        right: 12px;
+        font-size: 24px;
+    }
+
+    .booking-box h2 {
+        font-size: 27px;
+        line-height: 1.2;
+        padding-right: 30px;
+    }
+
+    .booking-box > p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .selected-safari {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------
+       FORM
+    ----------------------------------------- */
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .form-group label {
+        font-size: 9px;
+    }
+
+    .form-group input {
+        padding: 13px 11px;
+        font-size: 14px;
+        min-height: 44px;
+    }
+
+
+    /* -----------------------------------------
+       BOOKING BUTTONS
+    ----------------------------------------- */
+
+    .booking-actions {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .submit-booking,
+    .cancel-booking {
+        width: 100%;
+        min-height: 45px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   e.g. 320px - 360px
+========================================= */
+
+@media (max-width: 360px) {
+
+    .intro-content {
+        padding: 15px 10px;
+    }
+
+    .logo {
+        width: 175px;
+    }
+
+    .cinematic-text {
+        margin-top: 18px;
+        gap: 6px;
+    }
+
+    .cinematic-line {
+        font-size: 13px;
+        letter-spacing: 1.2px;
+    }
+
+    .tagline {
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+
+    .enter-btn {
+        margin-top: 22px;
+        padding: 11px 20px;
+        font-size: 9px;
+    }
+
+    .offer-popup {
+        padding: 25px 18px;
+    }
+
+    .offer-popup h2 {
+        font-size: 27px;
+    }
+
+    .offer-popup p {
+        font-size: 12px;
+    }
+
+    .offer-image {
+        height: 180px;
+    }
+
+    .offer-info h3 {
+        font-size: 21px;
+    }
+
+    .booking-box {
+        padding: 25px 17px 20px;
+    }
+}
+
+
+/* =========================================
+   LANDSCAPE PHONES
+========================================= */
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+    .landing {
+        overflow-y: auto;
+        align-items: flex-start;
+    }
+
+    .intro-content {
+        padding-top: 25px;
+        padding-bottom: 60px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .cinematic-text {
+        margin-top: 12px;
+        gap: 5px;
+    }
+
+    .cinematic-line {
+        font-size: 13px;
+    }
+
+    .tagline {
+        margin-top: 10px;
+    }
+
+    .enter-btn {
+        margin-top: 15px;
+    }
+
+    .skip-intro {
+        bottom: 10px;
+    }
+}
+
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .offer-card:hover {
+        transform: none;
+    }
+
+    .offer-card:hover .offer-image img {
+        transform: none;
+    }
+
+    .popup-btn,
+    .book-btn,
+    .continue-btn,
+    .enter-btn,
+    .submit-booking,
+    .cancel-booking {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
 
     </style>
 </head>
@@ -946,26 +1383,22 @@
 <!-- =====================================================
      OFFERS PAGE
 ===================================================== -->
+<!-- =====================================================
+     OFFERS PAGE
+===================================================== -->
 
-<section
-    class="offers-page"
-    id="offersPage"
->
+<div class="offers-page" id="offersPage">
 
     <div class="offers-header">
 
-        <span>
-            Raw Unwind Safaris
-        </span>
+        <span>Raw Unwind Safaris</span>
 
-        <h1>
-            Current Offers
-        </h1>
+        <h1>Our Exclusive Offers</h1>
 
         <p>
-            Curated journeys across Kenya and beyond.
-            Explore selected experiences and discover your next
-            unforgettable adventure.
+            Discover carefully selected safari experiences designed
+            to take you deeper into Kenya's wild landscapes,
+            culture and unforgettable adventures.
         </p>
 
     </div>
@@ -973,246 +1406,71 @@
 
     <div class="offers-grid">
 
-        <!-- GREAT MIGRATION -->
+        {% for offer in offers %}
 
-        <article class="offer-card">
+            <article class="offer-card">
 
-            <div class="offer-image">
+                <div class="offer-image">
 
-                <img
-                    src="{% static 'images/blogs/beast.jpg' %}"
-                    alt="Great Migration"
-                >
+                    {% if offer.image %}
 
-            </div>
+                        <img
+                            src="{{ offer.image.url }}"
+                            alt="{{ offer.title }}"
+                        >
 
-            <div class="offer-info">
+                    {% endif %}
 
-                <div class="offer-category">
-                    Signature Safari
                 </div>
 
-                <h3>
-                    Great Migration
-                </h3>
 
-                <p class="offer-description">
-                    Experience one of nature's most extraordinary
-                    spectacles through an unforgettable Kenyan safari
-                    journey.
-                </p>
+                <div class="offer-info">
 
-                <div class="price">
-                    $18,500
-                    <small>
-                        / experience
-                    </small>
+                    <div class="offer-category">
+                        {{ offer.category }}
+                    </div>
+
+                    <h3>
+                        {{ offer.title }}
+                    </h3>
+
+                    <p class="offer-description">
+                        {{ offer.description }}
+                    </p>
+
+                    <div class="price">
+
+                        {{ offer.price }}
+
+                        <small>
+                            {{ offer.price_label }}
+                        </small>
+
+                    </div>
+
+                    <button
+                        class="book-btn"
+                        onclick="openBooking('{{ offer.title|escapejs }}')"
+                    >
+                        Book Now
+                    </button>
+
                 </div>
 
-                <button
-                    class="book-btn"
-                    onclick="openBooking('Great Migration')"
-                >
-                    Book Now
-                </button>
+            </article>
 
-            </div>
+        {% empty %}
 
-        </article>
+            <p class="no-offers">
+                No current offers available.
+            </p>
 
-
-        <!-- WRC SAFARI -->
-
-        <article class="offer-card">
-
-            <div class="offer-image">
-
-                <img
-                    src="{% static 'images/hero/safari.jpg' %}"
-                    alt="WRC Safari Rally"
-                >
-
-            </div>
-
-            <div class="offer-info">
-
-                <div class="offer-category">
-                    Regenerative Adrenaline
-                </div>
-
-                <h3>
-                    WRC Safari Rally VIP
-                </h3>
-
-                <p class="offer-description">
-                    Experience the 2026 Safari Rally through an
-                    exclusive VIP regenerative adventure.
-                </p>
-
-                <div class="price">
-                    $18,500
-                    <small>
-                        / experience
-                    </small>
-                </div>
-
-                <button
-                    class="book-btn"
-                    onclick="openBooking('WRC Safari Rally VIP')"
-                >
-                    Book Now
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- COASTAL -->
-
-        <article class="offer-card">
-
-            <div class="offer-image">
-
-                <img
-                    src="{% static 'images/hero/2.jpg' %}"
-                    alt="Coastal Adventure"
-                >
-
-            </div>
-
-            <div class="offer-info">
-
-                <div class="offer-category">
-                    Coastal Retreat
-                </div>
-
-                <h3>
-                    Coastal Adventure
-                </h3>
-
-                <p class="offer-description">
-                    Discover Kenya's beautiful coast through a
-                    regenerative journey combining ocean, culture
-                    and unforgettable experiences.
-                </p>
-
-                <div class="price">
-                    $3,500
-                    <small>
-                        / experience
-                    </small>
-                </div>
-
-                <button
-                    class="book-btn"
-                    onclick="openBooking('Coastal Adventure')"
-                >
-                    Book Now
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- AERIAL -->
-
-        <article class="offer-card">
-
-            <div class="offer-image">
-
-                <img
-                    src="{% static 'images/blogs/helicopter.jpg' %}"
-                    alt="Aerial Adventures"
-                >
-
-            </div>
-
-            <div class="offer-info">
-
-                <div class="offer-category">
-                    Aerial Adventure
-                </div>
-
-                <h3>
-                    Aerial Adventures
-                </h3>
-
-                <p class="offer-description">
-                    See Kenya from a different perspective with
-                    unforgettable aerial experiences across some of
-                    the country's most spectacular landscapes.
-                </p>
-
-                <div class="price">
-                    Enquire
-                    <small>
-                        / custom experience
-                    </small>
-                </div>
-
-                <button
-                    class="book-btn"
-                    onclick="openBooking('Aerial Adventures')"
-                >
-                    Book Now
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- KENYA UNBOUND -->
-
-        <article class="offer-card">
-
-            <div class="offer-image">
-
-                <img
-                    src="{% static 'images/about/9.jpg' %}"
-                    alt="Kenya Unbound"
-                >
-
-            </div>
-
-            <div class="offer-info">
-
-                <div class="offer-category">
-                    Luxury Experience
-                </div>
-
-                <h3>
-                    Kenya Unbound
-                </h3>
-
-                <p class="offer-description">
-                    A transformative Kenyan journey created around
-                    luxury, conservation, communities and the spirit
-                    of exploration.
-                </p>
-
-                <div class="price">
-                    $32,500
-                    <small>
-                        / experience
-                    </small>
-                </div>
-
-                <button
-                    class="book-btn"
-                    onclick="openBooking('Kenya Unbound')"
-                >
-                    Book Now
-                </button>
-
-            </div>
-
-        </article>
+        {% endfor %}
 
     </div>
 
+
+    <!-- CONTINUE TO WEBSITE -->
 
     <div class="continue-container">
 
@@ -1225,9 +1483,7 @@
 
     </div>
 
-</section>
-
-
+</div>
 <!-- =====================================================
      BOOKING FORM
 ===================================================== -->

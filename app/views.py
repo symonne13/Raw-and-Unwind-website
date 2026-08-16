@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import JsonResponse
-from .models import Blog, CulturalImmersions, LegacyPortfolio
+from .models import Blog, CulturalImmersions, LegacyPortfolio, Offer
 from django.urls import reverse
 
 def latest_legacy_portfolio(request):
@@ -174,3 +174,9 @@ def QR(request):
 def CarbonCredits(request):
     return render(request, 'app/carbon.html')
 
+def Landing(request):
+    offers = Offer.objects.all()
+
+    return render(request, "app/landing.html", {
+        "offers": offers
+    })
