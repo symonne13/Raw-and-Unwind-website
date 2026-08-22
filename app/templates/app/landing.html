@@ -30,52 +30,84 @@
         button {
             font-family: inherit;
         }
+/* =========================================
+   LANDING SCREEN
+========================================= */
 
-        /* =========================================
-           LANDING SCREEN
-        ========================================= */
+.landing {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
 
-        .landing {
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            background:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.42),
-                    rgba(0, 0, 0, 0.68)
-                ),
-                url("{% static 'images/hero/5.jpeg' %}") center center / cover no-repeat;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.42),
+            rgba(0, 0, 0, 0.68)
+        ),
+        url("{% static 'images/hero/5.jpeg' %}")
+        center center / cover no-repeat;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            animation: backgroundZoom 12s ease-out forwards;
+    animation: backgroundZoom 12s ease-out forwards;
+
+    /* Prevent zoomed background from creating unwanted overflow */
+    overflow: hidden;
+}
+
+.landing::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0, 0, 0, 0.35) 100%
+        );
+
+    pointer-events: none;
+}
+
+@keyframes backgroundZoom {
+    from {
+        transform: scale(1.02);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+}
+@media (max-width: 600px) {
+
+    .landing {
+        min-height: 100svh;
+
+        padding: 20px;
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        /* Much smaller zoom on phones */
+        animation: mobileBackgroundZoom 12s ease-out forwards;
+    }
+
+    @keyframes mobileBackgroundZoom {
+        from {
+            transform: scale(1);
         }
 
-        .landing::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(
-                    circle at center,
-                    transparent 20%,
-                    rgba(0, 0, 0, 0.35) 100%
-                );
-            pointer-events: none;
+        to {
+            transform: scale(1.03);
         }
+    }
 
-        @keyframes backgroundZoom {
-            from {
-                transform: scale(1.05);
-            }
-
-            to {
-                transform: scale(1.15);
-            }
-        }
-
+    /* Your existing mobile styles continue below */
+}
         /* =========================================
            CINEMATIC CONTENT
         ========================================= */
