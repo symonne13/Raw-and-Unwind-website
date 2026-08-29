@@ -30,7 +30,9 @@ ALLOWED_HOSTS = [
     ".vercel.app",
 ]
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://raw-and-unwind-website.vercel.app",
+]
 # ============================================================
 # APPLICATIONS
 # ============================================================
