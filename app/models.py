@@ -361,7 +361,7 @@ class Offer(models.Model):
     )
 
     image = models.ImageField(
-        upload_to="offers/",
+        upload_to=upload_image_to,
         help_text="Upload the image for this offer."
     )
 
