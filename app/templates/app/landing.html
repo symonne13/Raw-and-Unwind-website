@@ -51,9 +51,7 @@
     align-items: center;
     justify-content: center;
 
-    animation: backgroundZoom 12s ease-out forwards;
-
-    /* Prevent zoomed background from creating unwanted overflow */
+    /* Keep the background at its normal size */
     overflow: hidden;
 }
 
@@ -72,15 +70,11 @@
     pointer-events: none;
 }
 
-@keyframes backgroundZoom {
-    from {
-        transform: scale(1.02);
-    }
 
-    to {
-        transform: scale(1.06);
-    }
-}
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 600px) {
 
     .landing {
@@ -91,22 +85,8 @@
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-
-        /* Much smaller zoom on phones */
-        animation: mobileBackgroundZoom 12s ease-out forwards;
     }
 
-    @keyframes mobileBackgroundZoom {
-        from {
-            transform: scale(1);
-        }
-
-        to {
-            transform: scale(1.03);
-        }
-    }
-
-    /* Your existing mobile styles continue below */
 }
         /* =========================================
            CINEMATIC CONTENT
