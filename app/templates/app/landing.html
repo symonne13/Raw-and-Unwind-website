@@ -74,19 +74,60 @@
 /* =========================================
    MOBILE
 ========================================= */
-
-@media (max-width: 600px) {
+     @media (max-width: 600px) {
 
     .landing {
-        min-height: 100svh;
+        position: fixed;
+        inset: 0;
 
-        padding: 20px;
+        padding: 25px 18px;
 
+        /*
+           Keeps the image covering the screen
+           without stretching it.
+        */
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
     }
 
+    .intro-content {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    .logo {
+        width: min(210px, 55vw);
+    }
+
+    .cinematic-text {
+        margin-top: 25px;
+        gap: 8px;
+    }
+
+    .cinematic-line {
+        font-size: clamp(14px, 4vw, 20px);
+        letter-spacing: 2px;
+    }
+
+    .tagline {
+        margin-top: 18px;
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .enter-btn {
+        margin-top: 28px;
+        padding: 12px 26px;
+        font-size: 10px;
+    }
+
+    .skip-intro {
+        right: 18px;
+        bottom: 18px;
+        font-size: 10px;
+    }
 }
         /* =========================================
            CINEMATIC CONTENT
@@ -345,9 +386,9 @@
 ========================================= */
 
 .offer-popup {
-    width: min(900px, 90%);
+    width: min(900px, 90vw);
     min-height: 500px;
-
+    max-height: 85vh;
     position: relative;
 
     overflow: hidden;
@@ -476,6 +517,118 @@
 
     color: white;
 }
+
+/* =========================================
+   OFFER POPUP MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .offer-overlay {
+        padding: 20px;
+
+        /*
+           Dark space around the image.
+        */
+        background: rgba(0, 0, 0, 0.78);
+
+        align-items: center;
+    }
+
+    .offer-popup {
+
+        /*
+           Smaller than the screen.
+        */
+        width: 88vw;
+
+        height: auto;
+        min-height: 430px;
+
+        max-height: 75vh;
+
+        /*
+           Image remains inside the card.
+        */
+        background-size: cover;
+        background-position: center;
+
+        padding: 28px 24px;
+
+        border-radius: 4px;
+
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.65);
+    }
+
+    .popup-label {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
+
+    .offer-popup h2 {
+        font-size: clamp(26px, 8vw, 40px);
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+
+    .offer-popup p {
+        max-width: 100%;
+
+        font-size: 13px;
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+    }
+
+    .popup-buttons {
+        gap: 8px;
+    }
+
+    .popup-btn {
+        padding: 11px 18px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .offer-overlay {
+        padding: 15px;
+    }
+
+    .offer-popup {
+        width: 90vw;
+        min-height: 390px;
+
+        max-height: 72vh;
+
+        padding: 22px 20px;
+    }
+
+    .offer-popup h2 {
+        font-size: 27px;
+    }
+
+    .offer-popup p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .popup-btn {
+        padding: 10px 14px;
+        font-size: 8px;
+    }
+}
+
+
         /* =========================================
            OFFERS PAGE
         ========================================= */
