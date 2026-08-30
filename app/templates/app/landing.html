@@ -200,7 +200,7 @@
         }
 
         .gold {
-            color: #d6b56a;
+            color:  #1a4d2e;
         }
 
         .tagline {
@@ -298,144 +298,184 @@
         }
 
         /* =========================================
-           OFFERS POPUP
-        ========================================= */
+   OFFERS POPUP
+========================================= */
 
-        .offer-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 2000;
+.offer-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
 
-            display: none;
-            align-items: center;
-            justify-content: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
 
-            background: rgba(0, 0, 0, 0.78);
-            backdrop-filter: blur(8px);
+    /* FULL SCREEN BACKGROUND IMAGE */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.70)
+        ),
+        url("{% static 'images/hero/wildb.jpg' %}")
+        center center / cover no-repeat;
 
-            padding: 20px;
-        }
+    backdrop-filter: blur(3px);
 
-        .offer-overlay.show {
-            display: flex;
-            animation: overlayIn 0.6s ease forwards;
-        }
+    padding: 40px;
+}
 
-        @keyframes overlayIn {
-            from {
-                opacity: 0;
-            }
+.offer-overlay.show {
+    display: flex;
+    animation: overlayIn 0.6s ease forwards;
+}
 
-            to {
-                opacity: 1;
-            }
-        }
+@keyframes overlayIn {
+    from {
+        opacity: 0;
+    }
 
-        .offer-popup {
-            width: min(650px, 95%);
-            min-height: 420px;
+    to {
+        opacity: 1;
+    }
+}
 
-            position: relative;
 
-            overflow: hidden;
+/* =========================================
+   POPUP CONTENT
+========================================= */
 
-            background:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.25),
-                    rgba(0, 0, 0, 0.72)
-                ),
-                url("{% static 'images/hero/wildb.jpg' %}")
-                center / cover;
+.offer-popup {
+    width: min(900px, 90%);
+    min-height: 500px;
 
-            border: 1px solid rgba(214, 181, 106, 0.45);
+    position: relative;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+    overflow: hidden;
 
-            padding: 40px;
+    /* REMOVE THE OLD IMAGE */
+    background: transparent;
 
-            box-shadow:
-                0 25px 80px rgba(0, 0, 0, 0.7);
+    border: none;
 
-            animation: popupIn 0.7s cubic-bezier(.16,1,.3,1);
-        }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
-        @keyframes popupIn {
-            from {
-                opacity: 0;
-                transform: scale(0.88) translateY(30px);
-            }
+    padding: 50px;
 
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
+    color: white;
 
-        .popup-label {
-            color: #d6b56a;
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
+    box-shadow: none;
 
-            margin-bottom: 12px;
-        }
+    animation: popupIn 0.7s cubic-bezier(.16,1,.3,1);
+}
 
-        .offer-popup h2 {
-            font-size: clamp(30px, 5vw, 50px);
-            font-weight: 400;
-            margin-bottom: 12px;
-        }
+@keyframes popupIn {
+    from {
+        opacity: 0;
+        transform: scale(0.88) translateY(30px);
+    }
 
-        .offer-popup p {
-            max-width: 520px;
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
 
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.7;
 
-            color: rgba(255, 255, 255, 0.85);
+.popup-label {
+    color: whitesmoke;
 
-            margin-bottom: 25px;
-        }
+    font-family: Arial, sans-serif;
 
-        .popup-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+    font-size: 11px;
 
-        .popup-btn {
-            padding: 13px 25px;
+    letter-spacing: 4px;
 
-            border: 1px solid #d6b56a;
+    text-transform: uppercase;
 
-            background: transparent;
-            color: white;
+    margin-bottom: 12px;
+}
 
-            cursor: pointer;
 
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+.offer-popup h2 {
+    font-size: clamp(30px, 5vw, 60px);
 
-            transition: 0.3s ease;
-        }
+    font-weight: 400;
 
-        .popup-btn.primary {
-            background: #d6b56a;
-            color: #111;
-        }
+    margin-bottom: 12px;
 
-        .popup-btn:hover {
-            background: white;
-            border-color: white;
-            color: #111;
-        }
+    color: white;
+}
 
+
+.offer-popup p {
+    max-width: 600px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.popup-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.popup-btn {
+    padding: 13px 25px;
+
+    border: 1px solid white;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+
+.popup-btn.primary {
+    background: rgb(14, 107, 14);
+
+    color: white;
+
+    border-color: rgb(14, 107, 14);
+}
+
+
+.popup-btn:hover {
+    background: forestgreen;
+
+    border-color: white;
+
+    color: white;
+}
         /* =========================================
            OFFERS PAGE
         ========================================= */
@@ -452,8 +492,8 @@
 
             background:
                 linear-gradient(
-                    rgba(5, 8, 7, 0.96),
-                    rgba(5, 8, 7, 0.98)
+                    white,
+                 white
                 );
         }
 
@@ -480,7 +520,7 @@
         }
 
         .offers-header span {
-            color: #d6b56a;
+            color: #0a0908;
 
             font-family: Arial, sans-serif;
             font-size: 11px;
@@ -490,7 +530,7 @@
 
         .offers-header h1 {
             margin-top: 15px;
-
+            color: #0a0908;
             font-size: clamp(35px, 6vw, 65px);
             font-weight: 400;
         }
@@ -499,7 +539,7 @@
             max-width: 650px;
             margin: 20px auto 0;
 
-            color: rgba(255,255,255,0.65);
+            color: rgba(7, 5, 5, 0.65);
 
             font-family: Arial, sans-serif;
             line-height: 1.7;
@@ -555,7 +595,7 @@
         }
 
         .offer-category {
-            color: #d6b56a;
+            color: whitesmoke;
 
             font-family: Arial, sans-serif;
             font-size: 10px;
@@ -571,7 +611,7 @@
         }
 
         .offer-description {
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.952);
 
             font-family: Arial, sans-serif;
             font-size: 13px;
@@ -598,10 +638,10 @@
 
             padding: 13px;
 
-            border: 1px solid #d6b56a;
+            border: 1px solid forestgreen;
 
             background: transparent;
-            color: #d6b56a;
+            color: rgb(81, 223, 81);
 
             cursor: pointer;
 
@@ -614,7 +654,7 @@
         }
 
         .book-btn:hover {
-            background: #d6b56a;
+            background:rgb(21, 126, 21);
             color: #111;
         }
 
@@ -626,8 +666,8 @@
         .continue-btn {
             padding: 15px 35px;
 
-            background: #d6b56a;
-            color: #111;
+            background: rgb(9, 49, 9);
+            color: white;
 
             border: none;
 
@@ -711,7 +751,7 @@
         }
 
         .selected-safari {
-            color: #d6b56a;
+            color:whitesmoke;
 
             font-family: Arial, sans-serif;
             font-size: 12px;
@@ -762,7 +802,7 @@
         }
 
         .form-group input:focus {
-            border-color: #d6b56a;
+            border-color: rgb(9, 49, 9);
         }
 
         .booking-actions {
@@ -787,9 +827,9 @@
         }
 
         .submit-booking {
-            background: #d6b56a;
-            border: 1px solid #d6b56a;
-            color: #111;
+            background: rgb(9, 49, 9);
+            border: 1px solid rgb(9, 49, 9);
+            color: white;
         }
 
         .cancel-booking {
