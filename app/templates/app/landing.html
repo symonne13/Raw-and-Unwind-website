@@ -1636,11 +1636,11 @@
                     </div>
 
                     <h3>
-                        {{ offer.title }}
+                        {{ offer.title|truncatechars:15 }}
                     </h3>
 
                     <p class="offer-description">
-                        {{ offer.description }}
+                        {{ offer.description|truncatechars:20 }}
                     </p>
 
                     <div class="price">
