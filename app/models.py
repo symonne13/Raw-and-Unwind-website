@@ -4,7 +4,7 @@ from django.utils.text import slugify
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.contrib.auth.models import User
 from django.utils import timezone
-
+from cloudinary_storage.storage import MediaCloudinaryStorage
 
 # =========================================================
 # IMAGE UPLOAD HELPER
@@ -158,7 +158,8 @@ class CulturalImmersions(models.Model):
     )
 
     main_image = models.ImageField(
-        upload_to=upload_image_to
+        upload_to=upload_image_to,
+        storage=MediaCloudinaryStorage()
     )
 
     content = RichTextUploadingField()
@@ -359,12 +360,12 @@ class Offer(models.Model):
         default="/ experience",
         help_text="Example: / experience or / custom experience"
     )
-
     image = models.ImageField(
         upload_to=upload_image_to,
+        storage=MediaCloudinaryStorage(),
         help_text="Upload the image for this offer."
     )
-
+   
     is_active = models.BooleanField(
         default=True,
         help_text="Only active offers appear on the website."
