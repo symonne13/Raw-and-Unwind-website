@@ -32,9 +32,45 @@
     <link rel="icon" type="image/png" href="{% static 'images/favicon.jpg' %}">
     <link rel="apple-touch-icon" href="{% static 'images/favicon.jpg' %}">
     {% endblock %}
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#1a4d2e',
+                            dark: '#0d2818',
+                            secondary: '#2d5a41',
+                            accent: '#4a7c59',
+
+                            cream: '#faf8f3',
+                            sand: '#f0ebe0',
+                            beige: '#e8e0d0',
+
+                            text: '#24352a',
+                            muted: '#3d5a46',
+
+                            white: '#ffffff',
+                            black: '#000000',
+
+                            whatsapp: '#25D366',
+                        }
+                    },
+
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                        times: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
 </head>
 
-<body class="h-full font-body">
+<body class="font-playfair h-full font-body">
     <div id="app-wrapper" class="w-full h-full overflow-auto">
         <div class="min-h-full w-full"
             style="background: linear-gradient(180deg, #faf8f3 0%, #f0ebe0 50%, #e8e0d0 100%);">
