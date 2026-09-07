@@ -11,8 +11,8 @@
             extend: {
                 colors: {
                     primary: '#1a4d2e',
-                    forest: '#0d2e1d',
-                    deepforest: '#081c12',
+                    forest: '#1a4d2e',
+                    deepforest: '#1a4d2e',
                     sage: '#6f8f72',
                     moss: '#3f684b',
                     cream: '#f5f1e7',
@@ -45,230 +45,231 @@
 
 <div class="min-h-screen overflow-x-hidden bg-cream text-charcoal">
 
-  
+```
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+<section
+    class="relative flex min-h-screen items-center overflow-hidden bg-forest px-6 pb-20 pt-32 text-cream lg:px-12"
+    aria-label="Akiba Safaris"
+>
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
-    <section
-        class="relative flex min-h-screen items-center overflow-hidden bg-forest px-6 pb-20 pt-32 text-cream lg:px-12"
-        aria-label="Akiba Safaris"
-    >
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(111,143,114,0.18),transparent_35%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.06),transparent_35%)]"></div>
 
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(111,143,114,0.18),transparent_35%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.06),transparent_35%)]"></div>
+    <div class="relative mx-auto w-full max-w-6xl text-center">
 
-        <div class="relative mx-auto w-full max-w-6xl text-center">
+        <div class="mb-8 inline-flex items-center border border-white/15 px-5 py-2">
+            <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-sage">
+                Carbon-Zero · Community-Rooted · Kenyan-Led
+            </span>
+        </div>
 
-            <div class="mb-8 inline-flex items-center border border-white/15 px-5 py-2">
-                <span class="font-sans text-[10px] uppercase tracking-[0.28em] text-sage">
-                    Carbon-Zero · Community-Rooted · Kenyan-Led
-                </span>
+        <p class="mb-5 font-sans text-xs uppercase tracking-[0.35em] text-cream/50">
+            Lipa Kidogo Kidogo
+        </p>
+
+        <h1 class="font-display text-6xl font-medium leading-[0.9] tracking-wide text-cream sm:text-7xl lg:text-[8rem]">
+            AKIBA
+            <span class="block font-serif italic text-sage">
+                Safaris
+            </span>
+        </h1>
+
+        <div class="mx-auto my-8 h-px w-16 bg-sage"></div>
+
+        <p class="mx-auto max-w-2xl font-serif text-xl italic leading-relaxed text-cream/70 sm:text-2xl">
+            Lipa Kidogo Kidogo, Safiri Kama Tajiri.
+        </p>
+
+        <p class="mx-auto mt-6 max-w-2xl font-sans text-sm font-light leading-8 text-cream/55">
+            Kenya was never meant for other people. It is yours.
+            Save monthly, travel royally — no lock-in, no hidden charges,
+            no compromise on quality.
+        </p>
+
+        <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+
+            <a
+                href="#packages"
+                class="bg-sage px-7 py-4 font-sans text-[10px] uppercase tracking-[0.22em] text-white transition hover:bg-moss"
+            >
+                View Packages
+            </a>
+
+            <a
+                href="#calculator"
+                class="border border-white/25 px-7 py-4 font-sans text-[10px] uppercase tracking-[0.22em] text-cream transition hover:border-sage hover:text-sage"
+            >
+                Plan My Payment
+            </a>
+
+            <a
+                href="#destinations"
+                class="border border-white/25 px-7 py-4 font-sans text-[10px] uppercase tracking-[0.22em] text-cream transition hover:border-sage hover:text-sage"
+            >
+                All Destinations
+            </a>
+
+        </div>
+
+        <div class="mx-auto mt-16 grid max-w-4xl grid-cols-2 border-y border-white/10 sm:grid-cols-5">
+
+            <div class="border-b border-white/10 px-4 py-5 sm:border-b-0 sm:border-r">
+                <div class="font-display text-2xl text-sage">30+</div>
+                <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
+                    Destinations
+                </div>
             </div>
 
-            <p class="mb-5 font-sans text-xs uppercase tracking-[0.35em] text-cream/50">
-                Lipa Kidogo Kidogo
+            <div class="border-b border-white/10 px-4 py-5 sm:border-b-0 sm:border-r">
+                <div class="font-display text-2xl text-sage">16</div>
+                <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
+                    Partner Properties
+                </div>
+            </div>
+
+            <div class="border-b border-white/10 px-4 py-5 sm:border-b-0 sm:border-r">
+                <div class="font-display text-2xl text-sage">12</div>
+                <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
+                    Months Max
+                </div>
+            </div>
+
+            <div class="border-r-0 border-b border-white/10 px-4 py-5 sm:border-b-0 sm:border-r">
+                <div class="font-display text-2xl text-sage">KES 0</div>
+                <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
+                    Lock-In Penalty
+                </div>
+            </div>
+
+            <div class="px-4 py-5">
+                <div class="font-display text-2xl text-sage">100%</div>
+                <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
+                    Carbon Verified
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =====================================================
+     PHILOSOPHY
+     ===================================================== -->
+<section class="border-b border-forest/10 bg-cream px-6 py-20 lg:px-12">
+
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:gap-20">
+
+        <div>
+            <p class="mb-4 font-sans text-[10px] uppercase tracking-[0.28em] text-moss">
+                The Akiba Philosophy
             </p>
 
-            <h1 class="font-display text-6xl font-medium leading-[0.9] tracking-wide text-cream sm:text-7xl lg:text-[8rem]">
-                AKIBA
+            <h2 class="max-w-xl font-display text-4xl leading-tight text-forest sm:text-5xl">
+                Travel is not a reward.
+                <span class="font-serif italic text-sage">
+                    It is a right.
+                </span>
+            </h2>
+        </div>
+
+        <div class="font-sans text-sm font-light leading-8 text-charcoal/65">
+            <p>
+                Akiba Safaris exists because the best places in Kenya —
+                the ones Kenyans have been told to admire from a distance —
+                belong to us first.
+            </p>
+
+            <p class="mt-5">
+                Every property was selected to be within financial reach
+                of a household, a Chama group, or an individual saver. 
+                We carry your financial wellbeing like we carry the journey:
+                carefully, with both hands.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LIPA KIDOGO KIDOGO
+     ===================================================== -->
+<section class="bg-white px-6 py-20 lg:px-12">
+
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+
+        <div>
+            <p class="mb-4 font-sans text-[10px] uppercase tracking-[0.28em] text-moss">
+                How It Works
+            </p>
+
+            <h2 class="font-display text-4xl leading-tight text-forest sm:text-5xl">
+                Build your journey
                 <span class="block font-serif italic text-sage">
-                    Safaris
+                    one payment at a time.
                 </span>
-            </h1>
+            </h2>
+        </div>
 
-            <div class="mx-auto my-8 h-px w-16 bg-sage"></div>
-
-            <p class="mx-auto max-w-2xl font-serif text-xl italic leading-relaxed text-cream/70 sm:text-2xl">
-                Lipa Kidogo Kidogo, Safiri Kama Tajiri.
+        <div class="border-l border-forest/15 pl-7 font-sans text-sm font-light leading-8 text-charcoal/65">
+            <p>
+                Pay a <strong class="font-medium text-forest">20–30% deposit</strong>
+                to confirm your booking.
             </p>
 
-            <p class="mx-auto mt-6 max-w-2xl font-sans text-sm font-light leading-8 text-cream/55">
-                Kenya was never meant for other people. It is yours.
-                Save monthly, travel royally — no lock-in, no hidden charges,
-                no compromise on quality.
+            <p class="mt-4">
+                Save monthly in instalments of up to 12 months.
+                Your rate is frozen at booking.
             </p>
 
-            <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+            <p class="mt-4">
+                On the 5th of every month, your personalised WhatsApp
+                reminder arrives.
+            </p>
 
-                <a
-                    href="#packages"
-                    class="bg-sage px-7 py-4 font-sans text-[10px] uppercase tracking-[0.22em] text-white transition hover:bg-moss"
-                >
-                    View Packages
-                </a>
-
-                <a
-                    href="#calculator"
-                    class="border border-white/25 px-7 py-4 font-sans text-[10px] uppercase tracking-[0.22em] text-cream transition hover:border-sage hover:text-sage"
-                >
-                    Plan My Payment
-                </a>
-
-                <a
-                    href="#destinations"
-                    class="border border-white/25 px-7 py-4 font-sans text-[10px] uppercase tracking-[0.22em] text-cream transition hover:border-sage hover:text-sage"
-                >
-                    All Destinations
-                </a>
-
-            </div>
-
-            <div class="mx-auto mt-16 grid max-w-4xl grid-cols-2 border-y border-white/10 sm:grid-cols-5">
-
-                <div class="border-b border-white/10 px-4 py-5 sm:border-b-0 sm:border-r">
-                    <div class="font-display text-2xl text-sage">30+</div>
-                    <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
-                        Destinations
-                    </div>
-                </div>
-
-                <div class="border-b border-white/10 px-4 py-5 sm:border-b-0 sm:border-r">
-                    <div class="font-display text-2xl text-sage">16</div>
-                    <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
-                        Partner Properties
-                    </div>
-                </div>
-
-                <div class="border-b border-white/10 px-4 py-5 sm:border-b-0 sm:border-r">
-                    <div class="font-display text-2xl text-sage">12</div>
-                    <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
-                        Months Max
-                    </div>
-                </div>
-
-                <div class="border-r-0 border-b border-white/10 px-4 py-5 sm:border-b-0 sm:border-r">
-                    <div class="font-display text-2xl text-sage">KES 0</div>
-                    <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
-                        Lock-In Penalty
-                    </div>
-                </div>
-
-                <div class="px-4 py-5">
-                    <div class="font-display text-2xl text-sage">100%</div>
-                    <div class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
-                        Carbon Verified
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- =====================================================
-         PHILOSOPHY
-         ===================================================== -->
-    <section class="border-b border-forest/10 bg-cream px-6 py-20 lg:px-12">
-
-        <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:gap-20">
-
-            <div>
-                <p class="mb-4 font-sans text-[10px] uppercase tracking-[0.28em] text-moss">
-                    The Akiba Philosophy
-                </p>
-
-                <h2 class="max-w-xl font-display text-4xl leading-tight text-forest sm:text-5xl">
-                    Travel is not a reward.
-                    <span class="font-serif italic text-sage">
-                        It is a right.
-                    </span>
-                </h2>
-            </div>
-
-            <div class="font-sans text-sm font-light leading-8 text-charcoal/65">
-                <p>
-                    Akiba Safaris exists because the best places in Kenya —
-                    the ones Kenyans have been told to admire from a distance —
-                    belong to us first.
-                </p>
-
-                <p class="mt-5">
-                    Every property was selected to be within financial reach
-                    of a household, a Chama group, or an individual saver.
-                    We carry your financial wellbeing like we carry the journey:
-                    carefully, with both hands.
-                </p>
-            </div>
-
+            <p class="mt-4">
+                No penalties for life circumstances.
+                Just a journey, built one payment at a time.
+            </p>
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =====================================================
-         LIPA KIDOGO KIDOGO
-         ===================================================== -->
-    <section class="bg-white px-6 py-20 lg:px-12">
+<!-- =====================================================
+     CARBON
+     ===================================================== -->
+<section class="bg-moss px-6 py-8 text-white lg:px-12">
 
-        <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
 
-            <div>
-                <p class="mb-4 font-sans text-[10px] uppercase tracking-[0.28em] text-moss">
-                    How It Works
-                </p>
+        <div>
+            <p class="font-sans text-xs uppercase tracking-[0.2em] text-white/80">
+                Verified Carbon-Zero
+            </p>
 
-                <h2 class="font-display text-4xl leading-tight text-forest sm:text-5xl">
-                    Build your journey
-                    <span class="block font-serif italic text-sage">
-                        one payment at a time.
-                    </span>
-                </h2>
-            </div>
-
-            <div class="border-l border-forest/15 pl-7 font-sans text-sm font-light leading-8 text-charcoal/65">
-                <p>
-                    Pay a <strong class="font-medium text-forest">20–30% deposit</strong>
-                    to confirm your booking.
-                </p>
-
-                <p class="mt-4">
-                    Save monthly in instalments of up to 12 months.
-                    Your rate is frozen at booking.
-                </p>
-
-                <p class="mt-4">
-                    On the 5th of every month, your personalised WhatsApp
-                    reminder arrives.
-                </p>
-
-                <p class="mt-4">
-                    No penalties for life circumstances.
-                    Just a journey, built one payment at a time.
-                </p>
-            </div>
-
+            <p class="mt-2 max-w-3xl font-serif text-lg italic text-white/90">
+                Every Akiba booking includes a verified carbon offset through
+                Kenya's pioneering Mikoko Pamoja mangrove restoration programme.
+            </p>
         </div>
 
-    </section>
-
-
-    <!-- =====================================================
-         CARBON
-         ===================================================== -->
-    <section class="bg-moss px-6 py-8 text-white lg:px-12">
-
-        <div class="mx-auto flex max-w-7xl flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-
-            <div>
-                <p class="font-sans text-xs uppercase tracking-[0.2em] text-white/80">
-                    Verified Carbon-Zero
-                </p>
-
-                <p class="mt-2 max-w-3xl font-serif text-lg italic text-white/90">
-                    Every Akiba booking includes a verified carbon offset through
-                    Kenya's pioneering Mikoko Pamoja mangrove restoration programme.
-                </p>
-            </div>
-
-            <div class="shrink-0 border border-white/30 px-5 py-3 font-sans text-[9px] uppercase tracking-[0.2em]">
-                Verified · 2026
-            </div>
-
+        <div class="shrink-0 border border-white/30 px-5 py-3 font-sans text-[9px] uppercase tracking-[0.2em]">
+            Verified · 2026
         </div>
 
-    </section>
-    <section id="packages" class="bg-forest px-6 py-24 text-cream lg:px-12">
+    </div>
+
+</section>
+
+
+<section id="packages" class="bg-forest px-6 py-24 text-cream lg:px-12">
 
     <div class="mx-auto max-w-7xl">
 
@@ -297,58 +298,61 @@
 
         <div class="mt-14 grid gap-px bg-white/10 md:grid-cols-2 xl:grid-cols-3">
 
-            <!-- HIGHLAND ESCAPE -->
-            <article class="flex flex-col bg-[#10281b] p-8 sm:p-10">
+          <!-- HIGHLAND ESCAPE -->
 
-                <p class="font-sans text-[10px] uppercase tracking-[0.25em] text-sage">
-                    Tier 01
-                </p>
+<article class="flex flex-col bg-moss p-8 text-white sm:p-10">
 
-                <h3 class="mt-4 font-display text-3xl">
-                    Highland Escape
-                </h3>
+```
+<p class="font-sans text-[10px] uppercase tracking-[0.25em] text-white/70">
+    Tier 01
+</p>
 
-                <p class="mt-3 font-serif text-base italic leading-7 text-cream/55">
-                    Your first journey through Central Kenya's hidden highlands.
-                </p>
+<h3 class="mt-4 font-display text-3xl">
+    Highland Escape
+</h3>
 
-                <div class="mt-8">
-                    <p class="font-display text-4xl">
-                        KES 58,000
-                    </p>
+<p class="mt-3 font-serif text-base italic leading-7 text-white/70">
+    Your first journey through Central Kenya's hidden highlands.
+</p>
 
-                    <p class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
-                        2 Adults · 2 Nights · All-Inclusive
-                    </p>
-                </div>
+<div class="mt-8">
+    <p class="font-display text-4xl">
+        KES 58,000
+    </p>
 
-                <ul class="mt-8 flex-1 divide-y divide-white/10 font-sans text-xs leading-6 text-cream/60">
-                    <li class="py-3">2 nights at a selected Nokras property</li>
-                    <li class="py-3">All meals</li>
-                    <li class="py-3">Nature and recreational activities</li>
-                    <li class="py-3">Round-trip road transfers from Nairobi</li>
-                    <li class="py-3">Carbon-zero certificate</li>
-                </ul>
+    <p class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-white/50">
+        2 Adults · 2 Nights · All-Inclusive
+    </p>
+</div>
 
-                <div class="mt-6 border border-sage/30 bg-sage/5 p-5">
-                    <p class="font-sans text-[9px] uppercase tracking-[0.2em] text-sage">
-                        6 Month Plan
-                    </p>
+<ul class="mt-8 flex-1 divide-y divide-white/10 font-sans text-xs leading-6 text-white/70">
+    <li class="py-3">2 nights at a selected Nokras property</li>
+    <li class="py-3">All meals</li>
+    <li class="py-3">Nature and recreational activities</li>
+    <li class="py-3">Round-trip road transfers from Nairobi</li>
+    <li class="py-3">Carbon-zero certificate</li>
+</ul>
 
-                    <p class="mt-2 font-display text-2xl text-white">
-                        KES 9,700 / month
-                    </p>
-                </div>
+<div class="mt-6 border border-white/30 bg-white/10 p-5">
+    <p class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/70">
+        6 Month Plan
+    </p>
 
-                <button
-                    type="button"
-                    onclick="openLPP('Highland Escape', 58000, 6)"
-                    class="mt-5 w-full bg-sage px-5 py-4 font-sans text-[10px] uppercase tracking-[0.2em] text-white transition hover:bg-moss"
-                >
-                    Start My Plan
-                </button>
+    <p class="mt-2 font-display text-2xl text-white">
+        KES 9,700 / month
+    </p>
+</div>
 
-            </article>
+<button
+    type="button"
+    onclick="openLPP('Highland Escape', 58000, 6)"
+    class="mt-5 w-full bg-white px-5 py-4 font-sans text-[10px] uppercase tracking-[0.2em] text-forest transition hover:bg-cream"
+>
+    Start My Plan
+</button>
+
+
+</article>
 
 
             <!-- BUSH ESCAPE -->
@@ -405,61 +409,60 @@
             </article>
 
 
-            <!-- SAVANNA RETREAT -->
-            <article class="flex flex-col bg-[#1a4d2e] p-8 sm:p-10">
+          <!-- SAVANNA RETREAT --> 
+<article class="flex flex-col bg-moss p-8 text-white sm:p-10"> 
+ 
+    <p class="font-sans text-[10px] uppercase tracking-[0.25em] text-white/70"> 
+        Tier 03 
+    </p> 
+ 
+    <h3 class="mt-4 font-display text-3xl"> 
+        Savanna Retreat 
+    </h3> 
+ 
+    <p class="mt-3 font-serif text-base italic leading-7 text-white/70"> 
+        A deeper safari experience with comfort and wilderness. 
+    </p> 
+ 
+    <div class="mt-8"> 
+        <p class="font-display text-4xl"> 
+            KES 265,000 
+        </p> 
+ 
+        <p class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-white/50"> 
+            2 Adults · 3 Nights · Full Board 
+        </p> 
+    </div> 
+ 
+    <ul class="mt-8 flex-1 divide-y divide-white/10 font-sans text-xs leading-6 text-white/70"> 
+        <li class="py-3">Severin Safari Camp</li> 
+        <li class="py-3">Kibo Safari Camp</li> 
+        <li class="py-3">Game drives</li> 
+        <li class="py-3">Spa and relaxation options</li> 
+        <li class="py-3">Carbon-zero certificate</li> 
+    </ul> 
+ 
+    <div class="mt-6 border border-white/30 bg-white/10 p-5"> 
+        <p class="font-sans text-[9px] uppercase tracking-[0.2em] text-white/70"> 
+            12 Month Plan 
+        </p> 
+ 
+        <p class="mt-2 font-display text-2xl text-white"> 
+            KES 22,100 / month 
+        </p> 
+    </div> 
+ 
+    <button 
+        type="button" 
+        onclick="openLPP('Savanna Retreat', 265000, 12)" 
+        class="mt-5 w-full bg-white px-5 py-4 font-sans text-[10px] uppercase tracking-[0.2em] text-forest transition hover:bg-cream" 
+    > 
+        Start My Plan 
+    </button> 
+ 
+</article>
 
-                <p class="font-sans text-[10px] uppercase tracking-[0.25em] text-sage">
-                    Tier 03
-                </p>
-
-                <h3 class="mt-4 font-display text-3xl">
-                    Savanna Retreat
-                </h3>
-
-                <p class="mt-3 font-serif text-base italic leading-7 text-cream/55">
-                    A deeper safari experience with comfort and wilderness.
-                </p>
-
-                <div class="mt-8">
-                    <p class="font-display text-4xl">
-                        KES 265,000
-                    </p>
-
-                    <p class="mt-1 font-sans text-[9px] uppercase tracking-[0.18em] text-cream/40">
-                        2 Adults · 3 Nights · Full Board
-                    </p>
-                </div>
-
-                <ul class="mt-8 flex-1 divide-y divide-white/10 font-sans text-xs leading-6 text-cream/60">
-                    <li class="py-3">Severin Safari Camp</li>
-                    <li class="py-3">Kibo Safari Camp</li>
-                    <li class="py-3">Game drives</li>
-                    <li class="py-3">Spa and relaxation options</li>
-                    <li class="py-3">Carbon-zero certificate</li>
-                </ul>
-
-                <div class="mt-6 border border-sage/30 bg-sage/5 p-5">
-                    <p class="font-sans text-[9px] uppercase tracking-[0.2em] text-sage">
-                        12 Month Plan
-                    </p>
-
-                    <p class="mt-2 font-display text-2xl">
-                        KES 22,100 / month
-                    </p>
-                </div>
-
-                <button
-                    type="button"
-                    onclick="openLPP('Savanna Retreat', 265000, 12)"
-                    class="mt-5 w-full bg-sage px-5 py-4 font-sans text-[10px] uppercase tracking-[0.2em] text-white transition hover:bg-moss"
-                >
-                    Start My Plan
-                </button>
-
-            </article>
-
-
-            <!-- COASTAL -->
+<!-- COASTAL -->
             <article class="flex flex-col bg-white p-8 text-charcoal sm:p-10">
 
                 <p class="font-sans text-[10px] uppercase tracking-[0.25em] text-moss">
@@ -514,7 +517,7 @@
 
 
             <!-- SIGNATURE -->
-            <article class="flex flex-col bg-moss p-8 text-white sm:p-10 xl:col-span-2">
+            <article class="flex flex-col bg-moss p-8 text-white sm:p-10">
 
                 <p class="font-sans text-[10px] uppercase tracking-[0.25em] text-white/70">
                     Tier 05 · Signature
@@ -582,6 +585,8 @@
 
     </div>
 </section>
+
+
 <section id="calculator" class="bg-[#e8e1d4] px-6 py-24 lg:px-12">
 
     <div class="mx-auto max-w-4xl">
@@ -750,4 +755,6 @@
     </div>
 
 </section>
-{% endblock content%}
+```
+
+{% endblock content %}
