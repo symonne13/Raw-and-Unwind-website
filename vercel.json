@@ -2,11 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "rawunwind/wsgi.py": {
-      "excludeFiles": [
-        "app/static/**",
-        "public/static/**",
-        "staticfiles/**"
-      ]
+      "excludeFiles": "{app/static/**,public/static/**,staticfiles/**}"
     }
   }
 }
