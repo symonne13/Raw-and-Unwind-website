@@ -11,6 +11,7 @@ urlpatterns = [
     path('about/', views.About, name='about'),
     path('contact/', views.Contact, name='contact'),
     path('carbon_credits/', views.CarbonCredits, name='carbon_credits'),
+    path('TwendeChalbi/', views.TwendeChalbi, name='TwendeChalbi'),
     path('akiba_safaris/', views.AkibaSafaris, name='akiba_safaris'),
     path('legacy_portfolio/', views.legacyPortfolio, name='legacy_portfolio'),
     # path('WRC_Safari_Rally/', views.Safari, name='safari'),

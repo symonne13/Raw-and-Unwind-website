@@ -1,0 +1,781 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Tailwind CSS -->
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<!-- TOP BAR -->
+
+<div class="bg-[#0b2b26] text-white py-[10px] text-[13px] text-center tracking-[0.04em]">
+    10–14 DECEMBER 2026 · 5 DAYS / 4 NIGHTS · NORTHERN KENYA
+</div>
+
+<!-- HERO -->
+
+<section
+    class="relative min-h-[650px] md:min-h-[730px] bg-[linear-gradient(90deg,rgba(7,28,23,.78),rgba(7,28,23,.28)),url('https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=85')] bg-cover bg-center flex items-end text-white"
+>
+
+    <!-- LIVE COUNTDOWN — TOP RIGHT OF HERO -->
+
+    <div class="absolute top-6 right-5 md:right-8 z-10">
+        <div class="rounded-[4px] border border-[#d8b66e]/70 bg-[#d8b66e] px-5 py-4 shadow-[0_10px_35px_rgba(0,0,0,.35)]">
+
+            <p id="countdown-title"
+               class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#0b2b26] mb-3 text-center">
+                The journey begins in
+            </p>
+
+            <div class="flex items-end justify-center gap-3 sm:gap-4">
+
+                <div class="text-center">
+                    <div id="countdown-days"
+                         class="font-serif text-[32px] sm:text-[38px] font-normal leading-none text-[#0b2b26]">
+                        0
+                    </div>
+                    <p class="mt-1 text-[8px] uppercase tracking-[0.15em] text-[#0b2b26]/70">
+                        Days
+                    </p>
+                </div>
+
+                <div class="pb-4 text-[18px] text-[#0b2b26]">:</div>
+
+                <div class="text-center">
+                    <div id="countdown-hours"
+                         class="font-serif text-[28px] sm:text-[34px] font-normal leading-none text-[#0b2b26]">
+                        00
+                    </div>
+                    <p class="mt-1 text-[8px] uppercase tracking-[0.15em] text-[#0b2b26]/70">
+                        Hours
+                    </p>
+                </div>
+
+                <div class="pb-4 text-[18px] text-[#0b2b26]">:</div>
+
+                <div class="text-center">
+                    <div id="countdown-minutes"
+                         class="font-serif text-[28px] sm:text-[34px] font-normal leading-none text-[#0b2b26]">
+                        00
+                    </div>
+                    <p class="mt-1 text-[8px] uppercase tracking-[0.15em] text-[#0b2b26]/70">
+                        Minutes
+                    </p>
+                </div>
+
+                <div class="pb-4 text-[18px] text-[#0b2b26]">:</div>
+
+                <div class="text-center">
+                    <div id="countdown-seconds"
+                         class="font-serif text-[28px] sm:text-[34px] font-normal leading-none text-[#0b2b26]">
+                        00
+                    </div>
+                    <p class="mt-1 text-[8px] uppercase tracking-[0.15em] text-[#0b2b26]/70">
+                        Seconds
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="max-w-[1180px] mx-auto w-full px-5 md:px-7 pb-20">
+
+        <div class="text-[12px] tracking-[0.22em] uppercase text-[#e8d5a9] mb-[18px]">
+            The Twende Chalbi Consumer Journey
+        </div>
+
+        <h1 class="font-serif text-[48px] md:text-[8vw] leading-[0.95] font-normal mb-[22px] max-w-[850px]">
+            Five days.<br>
+            One extraordinary<br>
+            northern circuit.
+        </h1>
+
+        <p class="text-[18px] md:text-[19px] max-w-[650px] text-[#f3f1ea] mb-7">
+            From Nairobi through Marsabit and the white expanse of the Chalbi Desert to the turquoise waters of Lake Turkana — a frontier road trip designed for travellers who want to go beyond the familiar.
+        </p>
+
+        <div class="flex flex-wrap gap-[10px]">
+
+            <span class="border border-white/35 px-[13px] py-[9px] rounded-[30px] text-[13px] bg-white/[0.08] backdrop-blur-md">
+                Nairobi departure · 3:30 AM
+            </span>
+
+            <span class="border border-white/35 px-[13px] py-[9px] rounded-[30px] text-[13px] bg-white/[0.08] backdrop-blur-md">
+                Land Cruiser transport
+            </span>
+
+            <span class="border border-white/35 px-[13px] py-[9px] rounded-[30px] text-[13px] bg-white/[0.08] backdrop-blur-md">
+                Chalbi Desert
+            </span>
+
+            <span class="border border-white/35 px-[13px] py-[9px] rounded-[30px] text-[13px] bg-white/[0.08] backdrop-blur-md">
+                Lake Turkana
+            </span>
+
+        </div>
+
+        <div class="flex flex-wrap gap-3 mt-7">
+
+            <a
+                class="inline-flex items-center justify-center px-[23px] py-[15px] rounded-[2px] font-bold text-[14px] tracking-[0.03em] bg-[#d8b66e] text-[#17231e]"
+                href="https://wa.me/254743923293?text=Hello%20Raw%20%26%20Unwind%20Safaris%2C%20I%27m%20interested%20in%20the%20Twende%20Chalbi%20trip%2010%E2%80%9314%20December%202026."
+                target="_blank"
+            >
+                Enquire on WhatsApp
+            </a>
+
+            <a
+                class="inline-flex items-center justify-center px-[23px] py-[15px] rounded-[2px] font-bold text-[14px] tracking-[0.03em] border border-white/40 text-white"
+                href="#itinerary"
+            >
+                Explore the journey
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- JOURNEY -->
+
+<section class="py-[62px] md:py-[82px]" id="journey">
+
+    <div class="max-w-[1180px] mx-auto px-5 md:px-7">
+
+        <div class="grid grid-cols-1 md:grid-cols-[1.1fr_.9fr] gap-10 md:gap-[58px] items-start">
+
+            <div>
+
+                <div class="text-[12px] tracking-[0.2em] uppercase text-[#b9965a] font-bold">
+                    Why this journey
+                </div>
+
+                <h2 class="font-serif font-normal text-[34px] md:text-[clamp(34px,5vw,54px)] leading-[1.08] my-[10px] mb-[18px] text-[#0b2b26]">
+                    Kenya's northern frontier, experienced as a journey.
+                </h2>
+
+                <p class="text-[18px] text-[#48534e] max-w-[760px]">
+                    This is not simply a transfer from one destination to another. The route moves through changing landscapes, remote communities and remarkable natural settings — from the forests and crater-lake landscape of Marsabit to Chalbi's salt flats, North Horr's dunes and Lake Turkana.
+                </p>
+
+                <p class="text-[#18221f] mt-4">
+                    The journey includes photography, desert walks, cultural experiences, a Lake Turkana boat experience and time beside the lake, while professional guides, drivers and photography support the group throughout.
+                </p>
+
+            </div>
+
+
+            <!-- PRICE CARD -->
+
+            <div class="bg-white border border-[#ddd7ca] p-[34px] shadow-[0_12px_35px_rgba(18,63,50,.07)]">
+
+                <div class="uppercase tracking-[0.16em] text-[11px] text-[#68736e]">
+                    Consumer package
+                </div>
+
+                <div class="font-serif text-[40px] text-[#0b2b26] mt-[7px]">
+                    KES 58,000
+                    <span class="font-sans text-[14px] text-[#68736e]">
+                        / person sharing
+                    </span>
+                </div>
+
+                <div class="font-serif text-[40px] text-[#0b2b26] mt-[7px]">
+                    KES 66,000
+                    <span class="font-sans text-[14px] text-[#68736e]">
+                        / single occupancy
+                    </span>
+                </div>
+
+                <div class="h-px bg-[#ddd7ca] my-6"></div>
+
+                <div class="uppercase tracking-[0.16em] text-[11px] text-[#68736e]">
+                    Departure
+                </div>
+
+                <strong class="text-[#18221f]">
+                    Nairobi · 10 December 2026
+                </strong>
+
+                <div class="mt-[14px]">
+
+                    <div class="uppercase tracking-[0.16em] text-[11px] text-[#68736e]">
+                        Return
+                    </div>
+
+                    <strong class="text-[#18221f]">
+                        Nairobi · approximately 4:00–5:00 PM, 14 December
+                    </strong>
+
+                </div>
+
+                <div class="h-px bg-[#ddd7ca] my-6"></div>
+
+                <a
+                    class="flex items-center justify-center w-full px-[23px] py-[15px] rounded-[2px] font-bold text-[14px] tracking-[0.03em] bg-[#0b2b26] text-white"
+                    href="https://wa.me/254743923293?text=Please%20share%20the%20booking%20details%20for%20Twende%20Chalbi%2010%E2%80%9314%20December%202026."
+                    target="_blank"
+                >
+                    Request booking details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FACTS -->
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#ddd7ca] border border-[#ddd7ca] mt-[42px]">
+
+            <div class="bg-[#fbfaf6] p-6">
+                <strong class="block text-[#0b2b26] text-[15px] mb-1">
+                    5 Days / 4 Nights
+                </strong>
+                <span class="text-[13px] text-[#68736e]">
+                    10–14 December 2026
+                </span>
+            </div>
+
+            <div class="bg-[#fbfaf6] p-6">
+                <strong class="block text-[#0b2b26] text-[15px] mb-1">
+                    Remote terrain
+                </strong>
+                <span class="text-[13px] text-[#68736e]">
+                    Tarmac, murram & desert tracks
+                </span>
+            </div>
+
+            <div class="bg-[#fbfaf6] p-6">
+                <strong class="block text-[#0b2b26] text-[15px] mb-1">
+                    Connectivity
+                </strong>
+                <span class="text-[13px] text-[#68736e]">
+                    Patchy in some sections
+                </span>
+            </div>
+
+            <div class="bg-[#fbfaf6] p-6">
+                <strong class="block text-[#0b2b26] text-[15px] mb-1">
+                    Group travel
+                </strong>
+                <span class="text-[13px] text-[#68736e]">
+                    Accommodation may be split by capacity
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ITINERARY -->
+
+<section class="py-[62px] md:py-[82px] bg-[#f4efe5]" id="itinerary">
+
+    <div class="max-w-[1180px] mx-auto px-5 md:px-7">
+
+        <div class="text-[12px] tracking-[0.2em] uppercase text-[#b9965a] font-bold">
+            The route
+        </div>
+
+        <h2 class="font-serif font-normal text-[34px] md:text-[clamp(34px,5vw,54px)] leading-[1.08] my-[10px] mb-[18px] text-[#0b2b26]">
+            Day by day
+        </h2>
+
+
+        <!-- DAY 01 -->
+
+        <div class="grid grid-cols-1 md:grid-cols-[110px_1fr] gap-2 md:gap-[35px] py-[30px] border-t border-[#ddd7ca] first:border-t-0">
+
+            <div class="text-[12px] uppercase tracking-[0.15em] text-[#b9965a] font-bold">
+                Day 01<br>10 Dec
+            </div>
+
+            <div>
+
+                <h3 class="font-serif text-[28px] font-normal mb-2 text-[#0b2b26]">
+                    Nairobi → Nanyuki → Samburu → Marsabit
+                </h3>
+
+                <p class="text-[#53605a] mb-[9px]">
+                    Depart Nairobi at 3:30 AM. Stop at the Equator and Cedar Mall in Nanyuki before the northern drive. Continue via Samburu and Laisamis, with a photography stop overlooking Mount Ololokwe.
+                </p>
+
+                <p class="text-[#53605a]">
+                    Explore Marsabit National Park, including its crater-lake landscape, subject to road and park conditions. Dinner and overnight in Marsabit.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DAY 02 -->
+
+        <div class="grid grid-cols-1 md:grid-cols-[110px_1fr] gap-2 md:gap-[35px] py-[30px] border-t border-[#ddd7ca]">
+
+            <div class="text-[12px] uppercase tracking-[0.15em] text-[#b9965a] font-bold">
+                Day 02<br>11 Dec
+            </div>
+
+            <div>
+
+                <h3 class="font-serif text-[28px] font-normal mb-2 text-[#0b2b26]">
+                    Marsabit → Maikona → Chalbi Desert → North Horr
+                </h3>
+
+                <p class="text-[#53605a] mb-[9px]">
+                    After breakfast, leave Marsabit for the Chalbi region. Experience the white salt flats and vast desert landscape through photography, content creation, desert walks and landscape viewing.
+                </p>
+
+                <p class="text-[#53605a]">
+                    Continue to North Horr for lunch and check-in. Later, head to the sand dunes for an afternoon/evening experience and sunset, followed by dinner and a bonfire under the northern sky.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DAY 03 -->
+
+        <div class="grid grid-cols-1 md:grid-cols-[110px_1fr] gap-2 md:gap-[35px] py-[30px] border-t border-[#ddd7ca]">
+
+            <div class="text-[12px] uppercase tracking-[0.15em] text-[#b9965a] font-bold">
+                Day 03<br>12 Dec
+            </div>
+
+            <div>
+
+                <h3 class="font-serif text-[28px] font-normal mb-2 text-[#0b2b26]">
+                    North Horr → Loiyangalani → Lake Turkana
+                </h3>
+
+                <p class="text-[#53605a] mb-[9px]">
+                    An optional sunrise dune experience is available at 6:00 AM. After breakfast, depart for Loiyangalani and Lake Turkana.
+                </p>
+
+                <p class="text-[#53605a]">
+                    Take a Lake Turkana boat experience, with boats operating in groups of approximately eight, and learn more about the local El Molo community and its cultural heritage, subject to local arrangements and conditions. Afternoon lakeside relaxation includes swimming, photography and sunset views.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DAY 04 -->
+
+        <div class="grid grid-cols-1 md:grid-cols-[110px_1fr] gap-2 md:gap-[35px] py-[30px] border-t border-[#ddd7ca]">
+
+            <div class="text-[12px] uppercase tracking-[0.15em] text-[#b9965a] font-bold">
+                Day 04<br>13 Dec
+            </div>
+
+            <div>
+
+                <h3 class="font-serif text-[28px] font-normal mb-2 text-[#0b2b26]">
+                    Loiyangalani → Wind Farm → Ngurunit → Laisamis → Isiolo
+                </h3>
+
+                <p class="text-[#53605a] mb-[9px]">
+                    Depart early and travel towards Ngurunit, passing around the Lake Turkana Wind Power project, with a photography stop subject to conditions and timing.
+                </p>
+
+                <p class="text-[#53605a]">
+                    Continue to Ngurunit and the natural sliding rocks, subject to water, weather and ground conditions. Proceed through Laisamis and Archers Post to Isiolo for dinner and overnight at Sala Hotel.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DAY 05 -->
+
+        <div class="grid grid-cols-1 md:grid-cols-[110px_1fr] gap-2 md:gap-[35px] py-[30px] border-t border-[#ddd7ca]">
+
+            <div class="text-[12px] uppercase tracking-[0.15em] text-[#b9965a] font-bold">
+                Day 05<br>14 Dec
+            </div>
+
+            <div>
+
+                <h3 class="font-serif text-[28px] font-normal mb-2 text-[#0b2b26]">
+                    Isiolo → Nairobi
+                </h3>
+
+                <p class="text-[#53605a] mb-[9px]">
+                    Breakfast and check-out, then depart Isiolo at approximately 9:30 AM. Travel via the main highway with a possible short refreshment/rest stop en route.
+                </p>
+
+                <p class="text-[#53605a]">
+                    Arrive back in Nairobi at approximately 4:00–5:00 PM, bringing the Northern Kenya Frontier Road Trip to a close.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INCLUDED -->
+
+<section class="py-[62px] md:py-[82px]" id="included">
+
+    <div class="max-w-[1180px] mx-auto px-5 md:px-7">
+
+        <div class="text-[12px] tracking-[0.2em] uppercase text-[#b9965a] font-bold">
+            Included in your journey
+        </div>
+
+        <h2 class="font-serif font-normal text-[34px] md:text-[clamp(34px,5vw,54px)] leading-[1.08] my-[10px] mb-[18px] text-[#0b2b26]">
+            Everything listed in the consumer package.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 mt-[30px]">
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Return transport in Land Cruisers
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Four nights' accommodation
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Full-board meals from dinner on Day 1 to breakfast on the final day
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Mineral water throughout the trip
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Professional tour guides and drivers
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Professional photography throughout the experience
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Marsabit National Park
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Lake Paradise
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Kalacha Oasis
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Chalbi Desert experience
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                North Horr Sand Dunes
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Turkana Wind Power Turbines
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Swimming in Lake Turkana
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                Lake Turkana boat ride
+            </div>
+
+            <div class="py-3 border-b border-[#ddd7ca] text-[15px]">
+                <span class="text-[#b9965a] font-bold mr-[10px]">✓</span>
+                El’Molo community and cultural experience
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRAVEL NOTES -->
+
+<section class="py-[62px] md:py-[82px] bg-[#f4efe5]">
+
+    <div class="max-w-[1180px] mx-auto px-5 md:px-7">
+
+        <div class="text-[12px] tracking-[0.2em] uppercase text-[#b9965a] font-bold">
+            Travel notes
+        </div>
+
+        <h2 class="font-serif font-normal text-[34px] md:text-[clamp(34px,5vw,54px)] leading-[1.08] my-[10px] mb-[18px] text-[#0b2b26]">
+            Come prepared for the frontier.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[18px] mt-[30px]">
+
+            <div class="bg-white border border-[#ddd7ca] p-[25px]">
+                <h4 class="m-0 mb-2 text-[#0b2b26] text-[15px]">
+                    Road conditions
+                </h4>
+                <p class="m-0 text-[14px] text-[#68736e]">
+                    Expect long stretches of rough, dusty and corrugated roads. Travel times may change depending on road conditions.
+                </p>
+            </div>
+
+            <div class="bg-white border border-[#ddd7ca] p-[25px]">
+                <h4 class="m-0 mb-2 text-[#0b2b26] text-[15px]">
+                    Connectivity
+                </h4>
+                <p class="m-0 text-[14px] text-[#68736e]">
+                    Network coverage may be limited or unavailable in some sections. Download important documents and maps before departure.
+                </p>
+            </div>
+
+            <div class="bg-white border border-[#ddd7ca] p-[25px]">
+                <h4 class="m-0 mb-2 text-[#0b2b26] text-[15px]">
+                    Timing
+                </h4>
+                <p class="m-0 text-[14px] text-[#68736e]">
+                    The 3:30 AM Nairobi departure and scheduled morning departures are important because delays can affect later activities.
+                </p>
+            </div>
+
+            <div class="bg-white border border-[#ddd7ca] p-[25px]">
+                <h4 class="m-0 mb-2 text-[#0b2b26] text-[15px]">
+                    December conditions
+                </h4>
+                <p class="m-0 text-[14px] text-[#68736e]">
+                    The northern frontier can be hot during the day, while early mornings and evenings may feel considerably cooler.
+                </p>
+            </div>
+
+            <div class="bg-white border border-[#ddd7ca] p-[25px]">
+                <h4 class="m-0 mb-2 text-[#0b2b26] text-[15px]">
+                    Accommodation
+                </h4>
+                <p class="m-0 text-[14px] text-[#68736e]">
+                    Accommodation may be split according to capacity. On the Loiyangalani night, the group may stay across two properties while meals remain together.
+                </p>
+            </div>
+
+            <div class="bg-white border border-[#ddd7ca] p-[25px]">
+                <h4 class="m-0 mb-2 text-[#0b2b26] text-[15px]">
+                    What to bring
+                </h4>
+                <p class="m-0 text-[14px] text-[#68736e]">
+                    Bring a refillable bottle, sunscreen, hat, sunglasses, dust scarf/shuka, comfortable shoes, swimwear, towel, power bank, personal medication and identification.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PACKING -->
+
+<section class="py-[62px] md:py-[82px]">
+
+    <div class="max-w-[1180px] mx-auto px-5 md:px-7">
+
+        <div class="grid grid-cols-1 md:grid-cols-[1.1fr_.9fr] gap-10 md:gap-[58px] items-start">
+
+            <div>
+
+                <div class="text-[12px] tracking-[0.2em] uppercase text-[#b9965a] font-bold">
+                    Pack for the experience
+                </div>
+
+                <h2 class="font-serif font-normal text-[34px] md:text-[clamp(34px,5vw,54px)] leading-[1.08] my-[10px] mb-[18px] text-[#0b2b26]">
+                    Light, practical and ready for dust, sun and water.
+                </h2>
+
+                <ul class="columns-1 md:columns-2 pl-5 text-[#53605a] space-y-1">
+
+                    <li>Refillable water bottle & drinking water</li>
+                    <li>Snacks</li>
+                    <li>Sunscreen</li>
+                    <li>Hat/cap & sunglasses</li>
+                    <li>Mosquito repellent</li>
+                    <li>Shuka/scarf for dust</li>
+                    <li>Light comfortable clothing</li>
+                    <li>Warm jacket</li>
+                    <li>Closed & comfortable/open shoes</li>
+                    <li>Swimwear & towel</li>
+                    <li>Power bank & charging cables</li>
+                    <li>Personal medication & toiletries</li>
+                    <li>Wet wipes, sanitiser & tissues</li>
+                    <li>Identification documents</li>
+                    <li>Small cash in Kenyan shillings</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="bg-white border border-[#ddd7ca] p-[34px] shadow-[0_12px_35px_rgba(18,63,50,.07)]">
+
+                <div class="uppercase tracking-[0.16em] text-[11px] text-[#68736e]">
+                    Ready to go?
+                </div>
+
+                <h3 class="font-serif text-[30px] font-normal text-[#0b2b26] my-2 mb-3">
+                    Let's plan your Twende Chalbi journey.
+                </h3>
+
+                <p class="text-[#68736e]">
+                    Send us a WhatsApp enquiry and our team will guide you through availability, booking and the next steps.
+                </p>
+
+                <a
+                    class="inline-flex items-center justify-center px-[23px] py-[15px] rounded-[2px] font-bold text-[14px] tracking-[0.03em] bg-[#0b2b26] text-white mt-4"
+                    href="https://wa.me/254743923293?text=Hello%20Raw%20%26%20Unwind%20Safaris%2C%20I%27d%20like%20to%20book%20or%20enquire%20about%20Twende%20Chalbi%2010%E2%80%9314%20December%202026."
+                    target="_blank"
+                >
+                    WhatsApp 0743 923 293
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MOBILE BOTTOM BAR -->
+
+<div class="flex md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#ddd7ca] z-20 p-[10px_14px] gap-[10px]">
+
+    <a
+        class="flex-1 inline-flex items-center justify-center px-[23px] py-[15px] rounded-[2px] font-bold text-[14px] tracking-[0.03em] border border-[#ddd7ca]"
+        href="#itinerary"
+    >
+        Itinerary
+    </a>
+
+    <a
+        class="flex-1 inline-flex items-center justify-center px-[23px] py-[15px] rounded-[2px] font-bold text-[14px] tracking-[0.03em] bg-[#0b2b26] text-white"
+        href="https://wa.me/254743923293?text=Hello%20Raw%20%26%20Unwind%20Safaris%2C%20I%27m%20interested%20in%20Twende%20Chalbi%2010%E2%80%9314%20December%202026."
+        target="_blank"
+    >
+        WhatsApp Us
+    </a>
+
+</div>
+
+
+<!-- LIVE COUNTDOWN SCRIPT -->
+
+<script>
+
+    const twendeStartDate = new Date("2026-12-10T00:00:00+03:00");
+
+    function updateTwendeCountdown() {
+
+        const now = new Date();
+
+        const difference = twendeStartDate - now;
+
+        const daysElement = document.getElementById("countdown-days");
+        const hoursElement = document.getElementById("countdown-hours");
+        const minutesElement = document.getElementById("countdown-minutes");
+        const secondsElement = document.getElementById("countdown-seconds");
+        const titleElement = document.getElementById("countdown-title");
+
+        if (!daysElement || !hoursElement || !minutesElement || !secondsElement) {
+            return;
+        }
+
+        if (difference <= 0) {
+
+            daysElement.textContent = "0";
+            hoursElement.textContent = "00";
+            minutesElement.textContent = "00";
+            secondsElement.textContent = "00";
+
+            if (titleElement) {
+                titleElement.textContent = "The journey has begun";
+            }
+
+            return;
+        }
+
+        const days = Math.ceil(
+            difference / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (difference / (1000 * 60 * 60)) % 24
+        );
+
+        const minutes = Math.floor(
+            (difference / (1000 * 60)) % 60
+        );
+
+        const seconds = Math.floor(
+            (difference / 1000) % 60
+        );
+
+        daysElement.textContent = days;
+
+        hoursElement.textContent = String(hours).padStart(2, "0");
+
+        minutesElement.textContent = String(minutes).padStart(2, "0");
+
+        secondsElement.textContent = String(seconds).padStart(2, "0");
+
+    }
+
+    updateTwendeCountdown();
+
+    setInterval(updateTwendeCountdown, 1000);
+
+</script>
+
+
+{% endblock %}

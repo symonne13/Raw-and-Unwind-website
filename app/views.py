@@ -94,6 +94,9 @@ def Reviews(request):
 def Contact(request):
     return render(request, 'app/contact.html')
 
+def TwendeChalbi(request):
+    return render(request, 'app/TwendeChalbi.html')
+
 def AkibaSafaris(request):
     return render(request, 'app/akiba_safaris.html')
 
