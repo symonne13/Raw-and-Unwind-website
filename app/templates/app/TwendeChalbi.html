@@ -23,75 +23,92 @@
 <!-- HERO -->
 
 <section
-    class="relative min-h-[650px] md:min-h-[730px] bg-[linear-gradient(90deg,rgba(7,28,23,.78),rgba(7,28,23,.28)),url('https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=85')] bg-cover bg-center flex items-end text-white"
+    class="relative min-h-[780px] md:min-h-[730px] bg-[linear-gradient(90deg,rgba(7,28,23,.78),rgba(7,28,23,.28)),url('https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=85')] bg-cover bg-center text-white"
 >
 
-    <!-- LIVE COUNTDOWN — TOP RIGHT OF HERO -->
+    <!-- LIVE COUNTDOWN -->
 
-    <div class="absolute top-6 right-5 md:right-8 z-10">
-        <div class="rounded-[4px] border border-[#d8b66e]/70 bg-[#d8b66e] px-5 py-4 shadow-[0_10px_35px_rgba(0,0,0,.35)]">
+    <div class="absolute top-5 left-4 right-4 md:left-auto md:right-8 md:top-6 z-20">
+
+        <div class="ml-auto w-fit max-w-full rounded-[4px] border border-[#d8b66e]/70 bg-[#d8b66e] px-3 py-3 sm:px-5 sm:py-4 shadow-[0_10px_35px_rgba(0,0,0,.35)]">
 
             <p id="countdown-title"
-               class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#0b2b26] mb-3 text-center">
+               class="text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-[#0b2b26] mb-2 sm:mb-3 text-center">
                 The journey begins in
             </p>
 
-            <div class="flex items-end justify-center gap-3 sm:gap-4">
+            <div class="flex items-end justify-center gap-1.5 sm:gap-4">
 
-                <div class="text-center">
+                <!-- DAYS -->
+                <div class="text-center min-w-[38px] sm:min-w-[48px]">
                     <div id="countdown-days"
-                         class="font-serif text-[32px] sm:text-[38px] font-normal leading-none text-[#0b2b26]">
+                         class="font-serif text-[24px] sm:text-[38px] leading-none text-[#0b2b26]">
                         0
                     </div>
-                    <p class="mt-1 text-[8px] uppercase tracking-[0.15em] text-[#0b2b26]/70">
+
+                    <p class="mt-1 text-[6px] sm:text-[8px] uppercase tracking-[0.08em] sm:tracking-[0.15em] text-[#0b2b26]/70">
                         Days
                     </p>
                 </div>
 
-                <div class="pb-4 text-[18px] text-[#0b2b26]">:</div>
+                <div class="pb-3 text-[12px] sm:text-[18px] text-[#0b2b26]">
+                    :
+                </div>
 
-                <div class="text-center">
+                <!-- HOURS -->
+                <div class="text-center min-w-[38px] sm:min-w-[48px]">
                     <div id="countdown-hours"
-                         class="font-serif text-[28px] sm:text-[34px] font-normal leading-none text-[#0b2b26]">
+                         class="font-serif text-[22px] sm:text-[34px] leading-none text-[#0b2b26]">
                         00
                     </div>
-                    <p class="mt-1 text-[8px] uppercase tracking-[0.15em] text-[#0b2b26]/70">
+
+                    <p class="mt-1 text-[6px] sm:text-[8px] uppercase tracking-[0.08em] sm:tracking-[0.15em] text-[#0b2b26]/70">
                         Hours
                     </p>
                 </div>
 
-                <div class="pb-4 text-[18px] text-[#0b2b26]">:</div>
+                <div class="pb-3 text-[12px] sm:text-[18px] text-[#0b2b26]">
+                    :
+                </div>
 
-                <div class="text-center">
+                <!-- MINUTES -->
+                <div class="text-center min-w-[38px] sm:min-w-[48px]">
                     <div id="countdown-minutes"
-                         class="font-serif text-[28px] sm:text-[34px] font-normal leading-none text-[#0b2b26]">
+                         class="font-serif text-[22px] sm:text-[34px] leading-none text-[#0b2b26]">
                         00
                     </div>
-                    <p class="mt-1 text-[8px] uppercase tracking-[0.15em] text-[#0b2b26]/70">
+
+                    <p class="mt-1 text-[6px] sm:text-[8px] uppercase tracking-[0.08em] sm:tracking-[0.15em] text-[#0b2b26]/70">
                         Minutes
                     </p>
                 </div>
 
-                <div class="pb-4 text-[18px] text-[#0b2b26]">:</div>
+                <div class="pb-3 text-[12px] sm:text-[18px] text-[#0b2b26]">
+                    :
+                </div>
 
-                <div class="text-center">
+                <!-- SECONDS -->
+                <div class="text-center min-w-[38px] sm:min-w-[48px]">
                     <div id="countdown-seconds"
-                         class="font-serif text-[28px] sm:text-[34px] font-normal leading-none text-[#0b2b26]">
+                         class="font-serif text-[22px] sm:text-[34px] leading-none text-[#0b2b26]">
                         00
                     </div>
-                    <p class="mt-1 text-[8px] uppercase tracking-[0.15em] text-[#0b2b26]/70">
+
+                    <p class="mt-1 text-[6px] sm:text-[8px] uppercase tracking-[0.08em] sm:tracking-[0.15em] text-[#0b2b26]/70">
                         Seconds
                     </p>
                 </div>
 
             </div>
+
         </div>
+
     </div>
 
 
     <!-- HERO CONTENT -->
 
-    <div class="max-w-[1180px] mx-auto w-full px-5 md:px-7 pb-20">
+    <div class="max-w-[1180px] mx-auto w-full px-5 md:px-7 pt-[235px] md:pt-0 pb-16 md:pb-20">
 
         <div class="text-[12px] tracking-[0.22em] uppercase text-[#e8d5a9] mb-[18px]">
             The Twende Chalbi Consumer Journey
@@ -149,7 +166,6 @@
     </div>
 
 </section>
-
 
 <!-- JOURNEY -->
 
