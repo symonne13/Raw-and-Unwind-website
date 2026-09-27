@@ -24,6 +24,8 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = False
 
+
+
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
